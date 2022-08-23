@@ -5,7 +5,11 @@ from carts.models import *
 from carts.views import _cart_id
 from.utilz import paginateStore 
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
 
+
+
+@login_required(login_url='login')
 def store(request, category_slug=None):
     categories = None
     products = None

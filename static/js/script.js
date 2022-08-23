@@ -101,3 +101,9 @@ if (searchForm) {
         })
     }
 }
+
+
+
+setTimeout(function() {
+    $('messages').fadeout("slow")
+}, 4000)
