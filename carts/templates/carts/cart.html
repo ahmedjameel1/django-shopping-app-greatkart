@@ -8,7 +8,7 @@
     <div class="container">
     
     <!-- ============================ COMPONENT 1 ================================= -->
-        {%if cart == None or cartitems.count == 0%}
+        {%if cart == None and cartitems.count == 0%}
     <div class="text-center">
         <h3> There are no items in the cart!</h3>
         <br>
@@ -102,7 +102,7 @@
                     <img src="{%static 'images/misc/payments.png'%}" height="26">
                 </p>
                 {%if cartitems.count%}
-                <a href="./place-order.html" class="btn btn-primary btn-block"> Checkout </a>
+                <a href="{%url 'checkout'%}" class="btn btn-primary btn-block"> Checkout </a>
                 <a href="{%url 'store'%}" class="btn btn-light btn-block">Continue Shopping</a>
                 {% else %}
                 <a href="{%url 'store'%}" class="btn btn-light btn-block">Add item to the Cart!</a>
