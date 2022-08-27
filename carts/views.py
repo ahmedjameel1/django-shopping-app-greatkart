@@ -31,8 +31,8 @@ def cart(request,finalprice=0,total=0,tax=0,grandprice=0 ,cart = None ,cartitems
             cartitem.product.price = int(cartitem.product.price)
             total = cartitem.product.price*cartitem.quantity
             finalprice += total
-            tax = (2*finalprice)/100
-            grandprice = finalprice + tax
+        tax = (2*finalprice)/100
+        grandprice = finalprice + tax
 
     except ObjectDoesNotExist:
         pass

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'carts.apps.CartsConfig',
     'store.apps.StoreConfig',
     'cartegory.apps.CartegoryConfig',
+    'orders.apps.OrdersConfig',
     
 ]
 
@@ -144,3 +145,5 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'roarme247@gmail.com'
 EMAIL_HOST_PASSWORD = 'op'
+EMAIL_HOST_USER = 'email@gmail.com'
+EMAIL_HOST_PASSWORD = 'password'
