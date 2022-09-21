@@ -44,7 +44,15 @@
                         </div> <!-- form-group end.// -->  
                     </div>
                     <div class="form-group">
+
+                        {%if request.method == "GET"%}
                         <button type="submit" class="btn btn-primary btn-block"> Register  </button>
+                        {%else%}
+                        <button class="btn btn-primary" type="button" disabled>
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            Loading...
+                        </button>
+                        {%endif%}
                     </div> <!-- form-group// -->      
                     {{ form.email.errors }}  
                     {{ form.non_field_errors }} 

@@ -17,6 +17,7 @@ class Payment(models.Model):
 
 
 class Order(models.Model):
+
     STATUS = (
         ('New','New'),
         ('Accepted', 'Accepted'),

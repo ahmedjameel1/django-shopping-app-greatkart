@@ -29,19 +29,7 @@
 </header><!-- sect-heading -->
 
 	
-<div class="row">
-{%for product in products%}
-	<div class="col-md-3">
-		<div class="card card-product-grid">
-			<a href="{{product.get_url}}" class="img-wrap"> <img src="{{product.image.url}}"> </a>
-			<figcaption class="info-wrap">
-				<a href="{{product.get_url}}" class="title">{{product.product_name}}</a>
-				<div class="price mt-1">${{product.price}}</div> <!-- price-wrap.// -->
-			</figcaption>
-		</div>
-	</div> <!-- row.// -->
-{%endfor%}
-</div><!-- container // -->
+
 {% include 'pagination.html' with queryset=products custom_range=custom_range %}
 
 </section>

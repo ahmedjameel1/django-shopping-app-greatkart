@@ -8,7 +8,7 @@
     <h4 class="container">
 
     <!-- ============================ COMPONENT 1 ================================= -->
- <h4 class="text-center mb-1" >Review order and make Payment <img max-width="20px" height="20px"  src="{%static 'images/icons/secure-payment-icon.png'%}"></h4>
+ <h4 class="text-center mb-1" >Review order and make Payment <img max-width="25px" height="25px"  src="{%static 'images/icons/secure-payment.png'%}"></h4>
 
         <br>
         <div class="row">
@@ -103,8 +103,7 @@
                 <p class="text-center mb-3">
                     <img src="{%static 'images/misc/payments.png'%}" height="26">
                 </p>
-
-                <a href="{%url 'checkout'%}" class="btn btn-primary btn-block"> Make Payment </a>
+    <div id="paypal-button-container"></div>
 
             </div> <!-- card-body.// -->
             </div> <!-- card.// -->
@@ -118,5 +117,7 @@
     </div> <!-- container .//  -->
     </section>
     <!-- ========================= SECTION CONTENT END// ========================= -->
+
+
 
 {%endblock%}

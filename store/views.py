@@ -86,4 +86,5 @@ def search(request):
 
 
 
-
+def testNav(request):
+    return render(request, 'store/newnav.html')

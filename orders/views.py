@@ -2,16 +2,18 @@ from django.shortcuts import render, redirect
 from carts.models import CartItem
 from .forms import OrderForm , Order
 import datetime
+from .models import Payment
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here
-
+@login_required(login_url='login')
 def payments(request):
-    return render(request, 'orders/payments.html')
+    return render(request,'orders/payment_success.html')
 
 
 
-
+@login_required(login_url='login')
 def place_order(request,finalprice=0,total=0,tax=0,grandprice=0 ,cart = None ,cartitems = None):
     current_user = request.user
 
@@ -62,6 +64,7 @@ def place_order(request,finalprice=0,total=0,tax=0,grandprice=0 ,cart = None ,ca
                                       is_ordered = False,
                                       order_number=order_number)
 
+
             ctx = {
                 'order': order,
                 'cart_items': cart_items,
@@ -74,6 +77,5 @@ def place_order(request,finalprice=0,total=0,tax=0,grandprice=0 ,cart = None ,ca
 
         else:
             return redirect('checkout')
-
 
     return render(request, 'orders/place_order.html')
